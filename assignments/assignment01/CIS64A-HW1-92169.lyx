@@ -1,0 +1,318 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass scrbook
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "CiS64A Spring 2020 Homework 1"
+\pdf_author "Joshua Saunders"
+\pdf_subject "database management"
+\pdf_keywords "database"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1.25cm
+\rightmargin 1.25cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+CIS64A Spring 2020
+\end_layout
+
+\begin_layout Subtitle
+Homework 1
+\end_layout
+
+\begin_layout Author
+Joshua Saunders
+\end_layout
+
+\begin_layout Date
+4/20/2020
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Question: 
+\end_layout
+
+\begin_layout Standard
+In business operation, companies can store data using Microsoft Excel, that
+ is a 
+\begin_inset Quotes eld
+\end_inset
+
+spreadsheet
+\begin_inset Quotes erd
+\end_inset
+
+ software, not a DBMS.
+ Why do many businesses need a real database management system instead of
+ using Excel? Give the details of the reasons.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Answer:
+\end_layout
+
+\begin_layout Standard
+Microsoft Excel certainly has its usefulness in business, from creating
+ charts and graphs to performing financial analyses and more.
+ However, something that Microsoft Excel, and spreadsheets in general, do
+ not excel at is acting as a store for business data.
+ That is not to say that spreadsheets can't be used as a database management
+ system (DBMS), it's that spreadsheets shouldn't be used as a DBMS.
+\end_layout
+
+\begin_layout Standard
+An important aspect of business information is ensuring that every employee
+ that needs that information has access to it.
+ This can be a problem when using Excel for a number of reasons 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "microsoftfilelocked"
+literal "false"
+
+\end_inset
+
+.
+ First, the same file can be used by different versions of Microsoft Excel
+ (such as Office 365, the web, Android, or Excel 2019), but the problem
+ is that not every version of Excel has the capability to share access to
+ a file with other users (Microsoft calls this 
+\begin_inset Quotes eld
+\end_inset
+
+co-authoring
+\begin_inset Quotes erd
+\end_inset
+
+).
+ When a user uses a version of Excel that's incompatible with co-authoring
+ on a shared file the file becomes locked, preventing other users from using
+ the spreadsheet.
+ If an Excel spreadsheet is used as the database for a business and it becomes
+ locked making it not possible for others to get the information necessary
+ to conduct business.
+ By using an actual DBMS this problem is avoided because a DBMS allows for
+ concurrent access to the data meaning that multiple people have access
+ to the data at the same time 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "databasemgmtsystems"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Having an Excel spreadsheet as a DBMS instead of an actual DBMS prevents
+ customers from having access to a business's data.
+ An example of this is with an e-commerce website.
+ Currently, Excel limits the number of concurrent users to 256 if the file
+ is set to allow changes by more than one user 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "microsoftspecslimits"
+literal "false"
+
+\end_inset
+
+.
+ This is important because a large e-commerce website may have millions
+ or billions of visits per month, such as Walmart.com and Amazon.com, which
+ had approximately 388M and 2.2B visits in the month of March 2020, respectively,
+ which means that a spreadsheet would be unsuitable as a DBMS for an e-commerce
+ site 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "amazonsitetraffic,walmartsitetraffic"
+literal "false"
+
+\end_inset
+
+.
+ An actual DBMS such as MySQL can handle 100,000 simultaneous connections
+ out of the box 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "mysqlmaxconnections"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+There is also a potential for different people or departments within a company
+ to create different spreadsheets duplicating the data which can then diverge
+ as time goes on 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "databasemgmtsystems"
+literal "false"
+
+\end_inset
+
+.
+ If the data is stored in a central DBMS then this problem is avoided.
+\end_layout
+
+\begin_layout Standard
+Another problem with using an Excel spreadsheet as a DBMS is that of security.
+ Although Excel does offer some security features such as encrypting the
+ file and read-only access, there exist tools that allow encrypted Excel
+ files to be easily cracked and for someone with access to the spreadsheet
+ to copy sensitive data formulae 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "microsoftprotection,spreadsheetsecuritylimitations"
+literal "false"
+
+\end_inset
+
+.
+ An actual DBMS provides authorization features that can be applied to restrict
+ users from certain actions such as reading certain tables or from deleting
+ records 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "databasemgmtsystems"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Lastly, in an Excel spreadsheet formulae are embedded in the spreadsheet
+ itself and are viewable to anyone with access to the spreadsheet.
+ This can be a problem because this means that the formulae can be viewed
+ or changed without the proper protections enable on the spreadsheet if
+ the formulae are proprietary, thus exposing valuable intellectual property.
+ With an actual DBMS, the application logic can be hidden behind a program
+ layer and not be exposed to users 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "databasemgmtsystems"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "bibliography"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
