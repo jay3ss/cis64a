@@ -1,2 +1,8 @@
 # ignore the textbook
 text/
+
+# ignore some lyx files
+\#*#
+
+# ignore temp files
+*~
