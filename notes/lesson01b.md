@@ -67,7 +67,7 @@ end
 
   - Database (SQL)
 
-```
+```sql
 SELECT *
 FROM people
 WHERE
