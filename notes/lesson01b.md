@@ -173,3 +173,156 @@ Number    Address
 ------------------------------------------------------------------
 ```
 
+### The Three-Schema Architecture
+
+- Three layers
+  1. External layer 
+    a. External/conceptual mapping provides *logical data independence*
+    b. Gives the views: subset of the information in the conceptual level 
+       tailored towards the needs of particular set of users in our 
+       applications
+  2. Conceptual schema
+    a. Conceptual/internal mapping provides *physical data independence*
+  3. Internal schema (how data is *physically stored*)
+    a. E.g., files, disk, cloud
+- The layers should be independent such that a change in one doesn't affect the
+  other layers
+- External view/user views/schema:
+  Each external schema describes the part of the DB that a particular user group
+  is interested in & hides the rest of the DB from that user group. A high-level
+  data model or an implementation data model can be used at this level
+- Conceptual schema
+  - Specifies objects, characteristics of objects, relationships between 
+    objects, integrity rules, & object behavior
+  - Hides the details of physical storage structures & concentrates on
+    describing entities, data types, relationships, & constraints. A high-level
+    data mode, or an implementation data model can be used at this level
+- Internal schema
+  - Specifies how the data are stored/organized physically (e.g., indexes,
+    access paths, etc.)
+
+### Data Dictionary (Catalog)
+
+- Heart of the DB system
+- System DB w/metadata
+- Contains the definitions of:
+  - Conceptual schema
+  - External view/user views
+  - Physical schema
+
+### DBMS Languages
+
+- DBMS languages
+  - *Data definition language (DDL)*: language used by the DBA to define the 
+    DB's conceptual, internal, & external schemas
+  - *Data manipulation language (DML)*: laguage used to retrieve, insert, 
+    delete, & modify data. DML statements can be entered interactively from a 
+    terminal or embedded in a general-purpose programming language
+- For RDB systems, SQL is both the DDL & DML & can be used interactively, or be
+  embedded in a programming laguage
+- Used by DB designers/DBAs/end users
+
+## Advantages of Using DB Design
+
+- Data & functional independence
+- DB modeling
+- Managing data redundancy
+- Specifying integrity rules
+- Data security
+- Backup & recovery facilities
+- Performance utilities
+
+### Data Independence
+
+- Software applications should not be changed when changes occur to data
+  definitions
+- Physical data independence
+  - Neither applications nor conceptual schema must be changed when changes are
+    made to data specifications
+    - E.g.,  new access paths, indices, different storage media, etc.
+  - DBMS provides interfaces between the conceptual & physical data models
+- Logical data independence
+  - Software applications must not be changed when changes occur in the 
+    conceptual schema
+    - E.g., adding new objects or new characteristics of objects to the 
+      conceptual schema has no impact on software applications because of the
+      external views
+  - DBMS provides interfaces between the conceptual schema & external views
+
+### Functional Independence
+
+- Function
+  - Interface (signature): name of the function & its arguments
+  - Implementation (method): specifies how the function should be executed
+- Implementation (method) can change w/o impact on software applications
+- Information hiding
+- E.g., sorting
+
+### DB Modeling
+
+- Data model specifies objects, characteristics of objects, relationships 
+  between objects, integrity rules, & functions
+- Should provide a format & perfect mapping of the real world
+  - Best-case scenario, mappings are rarely perfect
+- Example data models: hierarchical model, CODASYL model, (E)ER model, 
+  relational model, object-oriented model, etc.
+
+### Managing Data Redundancy
+
+- Redundant data may be desired
+  - Increasing performance
+  - Using distributed environments
+- DBMS manages redundancy
+  - Synchronization
+  - Consistency
+- Compared to file-based redundancy
+  - DBMS guarantees correctness
+  - No user intervention required
+  - Much more efficient
+  - Errors are extremely unlikely
+
+### Specifying Integrity Rules
+
+- Integrity rules determine correctness of data
+  - Syntactic errors (e.g., customerID not numeric)
+  - Semantic errors (e.g., customerID not unique, trying to delete a customer
+    who has pending invoices)
+- Integrity rules are stored
+  - Embedded in applications in the file-based approach to data management
+  - Specified as part of the conceptual schema & stored in data dictionary
+    (catalog) in DB approach
+- Integrity rules are enforced
+  - By the applications accessing the files
+  - By the DBMS whenever anything is updated
+    - E.g., data loading, data manipulation, adding new integrity rules, etc.
+- *Note*: integrity rules can be sensitive to simultaneous usage of data in a
+  distributed environment
+    - E.g., same product being sold to two different customers (concurrency
+      control)
+
+### Data Security Issues
+
+- Some users have read access, others write access, some may access the whole
+  DB, others only certain parts
+- Trends such as in e-business (B2B, B2C), CRM, etc. stree the importance of
+  data security
+- Data access can be managed via user accounts & passwords for users, or user
+  groups
+- Each account has its own authorization rules, which are stored in the catalog
+
+### Backup & Recovery Facilities
+
+- In case of loss of data due to
+  - Hardware or network errors
+  - Bugs in system software or application programs
+- Backup facilities perform full or incremental backups
+  - This allows you to restore the system to a previous state
+- Recovery facilities allow you to restore data after loss or damage
+  - This allows you to recreate the state of the system prior to the failure
+
+
+### Performance Utilities
+
+- Allow you to tune the performance of the DB
+  - E.g., good response times, index tuning
+
