@@ -117,6 +117,130 @@ Joshua Saunders
 
 \begin_layout Standard
 
+\series bold
+1.
+ 
+\series default
+Suppose that you have a pizza store that need to maintain data for the following
+ items: 
+\end_layout
+
+\begin_layout Itemize
+products
+\end_layout
+
+\begin_layout Itemize
+customers
+\end_layout
+
+\begin_layout Itemize
+orders
+\end_layout
+
+\begin_layout Itemize
+delivery drivers
+\end_layout
+
+\begin_layout Standard
+Use the relational model to define the four schemas for relations similar
+ to the slide 2.7 where it defines the schema for instructor: 
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+schema: instructor(ID, name, dept_name, salary)
+\end_layout
+
+\begin_layout Standard
+\align left
+There is no need to list the instances for each relation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+2.
+
+\series default
+ Give an example of a Select operation for the 
+\bar under
+orders
+\bar default
+ relation and another example for the 
+\bar under
+customers
+\bar default
+ relation.
+ 
+\series bold
+Use plain English sentences
+\series default
+ similar to the example in slide 2.12, 2.13.
+ There is no need to use mathematical expressions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+3.
+
+\series default
+ Give an example of a Projection for the 
+\bar under
+orders
+\bar default
+ relation and another example for the 
+\bar under
+customers
+\bar default
+ relation.
+ 
+\series bold
+Use plain English sentences
+\series default
+ similar to the example in slide 2.15 to describe what attributes are included
+ in the 2 projections.
+ There is no need to use mathematical expressions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+4.
+
+\series default
+ Suppose that the pizza store manager wants to view the combined information
+ of orders and delivery drivers, then what kind of relational operation
+ do we need to use?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\,$
+\end_inset
+
+
 \end_layout
 
 \end_body
