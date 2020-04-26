@@ -209,7 +209,7 @@ The video can be found [here](https://www.youtube.com/watch?v=zTcUj4xTnnA)
   each individual entity. Domains are not displayed in ER diagrams
 
 
-## Relationships & Relationship Types
+### Relationships & Relationship Types
 
 - Relationship: represents the association between tow or more entities
 - Relationship type: defines a set of relationships among instances of one,
