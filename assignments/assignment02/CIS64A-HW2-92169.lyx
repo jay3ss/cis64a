@@ -166,6 +166,37 @@ There is no need to list the instances for each relation.
 
 \begin_layout Standard
 
+\family typewriter
+products(ID, price, name)
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+customers(ID, name, address)
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+orders(ID, product_id, customer_id, delivery_driver_id, store, total)
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+delivery_drivers(ID, name, vehicle_id, store)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
 \series bold
 2.
 
@@ -189,6 +220,60 @@ Use plain English sentences
 
 \begin_layout Standard
 \begin_inset Formula $\,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Orders
+\bar default
+ relation:
+\end_layout
+
+\begin_layout Standard
+Select those tuples of the 
+\bar under
+orders
+\bar default
+ relation where the 
+\family typewriter
+total
+\family default
+ is greater than $25.00.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Customers
+\bar default
+ relation:
+\end_layout
+
+\begin_layout Standard
+Select those tuples of the 
+\bar under
+customers
+\bar default
+ relation where the 
+\family typewriter
+name
+\family default
+ is John Smith.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -227,6 +312,60 @@ Use plain English sentences
 
 \begin_layout Standard
 
+\bar under
+Orders
+\bar default
+ relation:
+\end_layout
+
+\begin_layout Standard
+Eliminate the 
+\family typewriter
+delivery_driver_id
+\family default
+ attribute from 
+\bar under
+orders
+\bar default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Customers
+\bar default
+ relation:
+\end_layout
+
+\begin_layout Standard
+Eliminate the 
+\family typewriter
+ID
+\family default
+ attribute from 
+\bar under
+customers
+\bar default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
 \series bold
 4.
 
@@ -241,6 +380,11 @@ Use plain English sentences
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+In order for the pizza store manager to view the combined information of
+ orders and deliver drivers, then we should use a Cartesian-product operation.
 \end_layout
 
 \end_body
