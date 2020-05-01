@@ -167,7 +167,7 @@ There is no need to list the instances for each relation.
 \begin_layout Standard
 
 \family typewriter
-products(ID, price, name)
+products(ID, price, name, quantity)
 \end_layout
 
 \begin_layout Standard
@@ -238,11 +238,7 @@ Select those tuples of the
 \bar under
 orders
 \bar default
- relation where the 
-\family typewriter
-total
-\family default
- is greater than $25.00.
+ relation where the total is greater than $25.00.
 \end_layout
 
 \begin_layout Standard
@@ -265,11 +261,7 @@ Select those tuples of the
 \bar under
 customers
 \bar default
- relation where the 
-\family typewriter
-name
-\family default
- is John Smith.
+ relation where the name is John Smith.
 \end_layout
 
 \begin_layout Standard
@@ -319,11 +311,7 @@ Orders
 \end_layout
 
 \begin_layout Standard
-Eliminate the 
-\family typewriter
-delivery_driver_id
-\family default
- attribute from 
+Eliminate the delivery_driver_id attribute from 
 \bar under
 orders
 \bar default
@@ -346,11 +334,7 @@ Customers
 \end_layout
 
 \begin_layout Standard
-Eliminate the 
-\family typewriter
-ID
-\family default
- attribute from 
+Eliminate the ID attribute from 
 \bar under
 customers
 \bar default
@@ -384,7 +368,7 @@ customers
 
 \begin_layout Standard
 In order for the pizza store manager to view the combined information of
- orders and deliver drivers, then we should use a Cartesian-product operation.
+ orders and deliver drivers, we should use a Cartesian-product operation.
 \end_layout
 
 \end_body
