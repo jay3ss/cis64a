@@ -6,3 +6,6 @@ text/
 
 # ignore temp files
 *~
+
+# VS Code settings
+.vscode/
