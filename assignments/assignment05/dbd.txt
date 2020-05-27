@@ -1,0 +1,48 @@
+# From https://app.quickdatabasediagrams.com/
+# Modify this code to update the DB schema diagram.
+# To reset the sample schema, replace everything with
+# two dots ('..' - without quotes).
+
+Author
+-
+AuthorID PK int
+Name string 
+DateOfBirth date
+DateOfDeath date
+
+Book
+-
+BookID PK int
+AuthorID int FK >0- Author.AuthorID
+Title string
+Summary text
+ISBN string
+GenreID int FK >-< Genre.GenreID
+
+BookInstance as bs
+------------
+BookInstanceID PK int
+BookID int FK - Book.BookID
+Status char
+DueBack date
+Print string
+
+Customer
+--------
+CustomerID PK int
+Name string 
+DateOfBirth date
+DateOfDeath date
+
+Rental
+------
+RentalID PK int
+BookInstanceID int FK - bs.BookInstanceID
+CustomerID int FK -< Customer.CustomerID
+
+Genre
+-----
+GenreID PK int
+Name string unique
+
+
